@@ -1,0 +1,25 @@
+DECLEAR str1 as STRING
+DECLEAR str2 as STRING
+DECLEAR Cstr1 as STRING
+DECLEAR Cstr2 as STRING
+DECLEAR laststr1 as STRING
+DECLEAR laststr2 as STRING
+
+str1=""
+str2=""
+Cstr1=""
+Cstr2=""
+lastrstr1=""
+laststr2=""
+
+OUTPUT"Enter string 1 for the calculation"
+INPUT str1
+OUTPUT"Enter string 2 for the calculation"
+INPUT str2
+
+Cstr1=left(str1,2)
+Cstr2=left(str2,2)
+laststr1=MID(str1,3,LEN(str1)-2)
+laststr2= MID(str1q,3,LEN(str2)-2)
+
+OUTPUT("The new string 1 and 2 are",Cstr2+laststr1 &""&Cstr2+laststr2)

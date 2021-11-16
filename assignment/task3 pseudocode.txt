@@ -1,0 +1,30 @@
+DECLARE Str1 : STRING
+DECLARE Char1 : CHARACTER
+DECLARE i, digitCounter, alphaCounter : INTEGER
+
+
+Str1 ← ""
+Char1 ← ''
+i ← 0
+alphaCounter ← 0
+digitCounter ← 0
+
+
+INPUT "Enter string to process: ", Str1
+
+
+For i ← 1 TO LEN(Str1)
+  Char1 ← MID(Str1, i, 1)
+  Char1 ← UPPER(Char1)
+
+  IF Char1 >= 'A' AND Char1 <= 'Z'
+    THEN
+      alphaCounter ← alphaCounter +1  
+  ELSEIF Char1 >= '0' AND Char1 <= '9'
+    THEN
+      digitCounter ← digitCounter +1
+  END IF
+
+
+OUTPUT "Alphabets are: ", alphaCounter
+OUTPUT "Digits are: ", digitCounter
